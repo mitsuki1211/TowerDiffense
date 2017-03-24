@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
-
-
 public class MapLoader : MonoBehaviour
 {
     int i;
     int j;
     float width = Screen.width;
-    float height= Screen.height;
+    float height = Screen.height;
     public const int devide = 10;
     public GameObject road;
     public GameObject forest;
@@ -15,9 +14,8 @@ public class MapLoader : MonoBehaviour
     private float posX = 0;
     private float posY = 0;
     public static int[,] mapArray = new int[devide, devide];
-
-    
-    
+    [SerializeField]//privateな変数をインスペクタから設定できるようにするAttribute
+    private RectTransform mapParent;
 
 
     // Use this for initialization
@@ -30,24 +28,19 @@ public class MapLoader : MonoBehaviour
                 mapArray[i, j] = 0;
             }
         }
-
         mapArray[devide - 1, devide - 1] = 1;
-        mapArray[1, 1] = 2; 
+        mapArray[1, 1] = 2;
 
-        /*road.GetComponent<Transform>().localScale = new Vector2(height/devide, height/devide);
-        forest.GetComponent<Transform>().localScale = new Vector2(height/devide, height/devide);
-        goal.GetComponent<Transform>().localScale = new Vector2(height/devide, height/devide);
+        /*road.GetComponent<RectTransform>().sizeDelta = new Vector2(60, 60);
+        forest.GetComponent<RectTransform>().sizeDelta = new Vector2(60,60);
+        goal.GetComponent<RectTransform>().sizeDelta = new Vector2(120,120);
         */
-
-
         i = 1;
         j = 1;
-       
 
-
-        while(i < (devide - 1) || j < (devide - 1)) {
-            int z = UnityEngine.Random.Range(0,2);
-
+        while (i < (devide - 1) || j < (devide - 1))
+        {
+            int z = UnityEngine.Random.Range(0, 2);
             if (z == 1 && i < (devide - 1))
             {
                 i++;
@@ -58,26 +51,27 @@ public class MapLoader : MonoBehaviour
             }
             mapArray[i, j] = 1;
         }
-        
 
-
-
-        for (i = (devide - 1); i > -1; i--) {
+        for (i = (devide - 1); i > -1; i--)
+        {
             for (j = 0; j < devide; j++)
             {
-                if(mapArray[i,j] == 1)
+                if (mapArray[i, j] == 1)
                 {
                     GameObject go = Instantiate(road) as GameObject;
+                    go.transform.parent = mapParent;
                     go.transform.position = new Vector2(this.posX, this.posY);
                 }
-                if(mapArray[i,j] == 0)
+                if (mapArray[i, j] == 0)
                 {
                     GameObject go = Instantiate(forest) as GameObject;
+                    go.transform.parent = mapParent;
                     go.transform.position = new Vector2(this.posX, this.posY);
                 }
                 if (mapArray[i, j] == 2)
                 {
                     GameObject go = Instantiate(goal) as GameObject;
+                    go.transform.parent = mapParent;
                     go.transform.position = new Vector2(this.posX, this.posY);
                 }
                 this.posX = this.posX + 0.16f;
@@ -87,12 +81,10 @@ public class MapLoader : MonoBehaviour
         }
         Debug.Log(width);
         Debug.Log(height);
-      
+
     }
-
-        // Update is called once per frame
-        void Update()
+    // Update is called once per frame
+    void Update()
     {
-
     }
 }
