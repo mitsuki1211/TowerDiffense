@@ -2,27 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.VersionControl;
+
 public class EnemyGenerator : MonoBehaviour
 {
     public GameObject enemyPrefab;
     [SerializeField]
     private RectTransform mapParent;
+
     // Use this for initialization
-    int time = 0;
     void Start()
     {
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        time++;
-        if (time % 20 == 0)
+    }
+
+    public void EnemyGenerate()
+    {
         {
             GameObject go = Instantiate(enemyPrefab) as GameObject;
-            go.transform.parent = mapParent;
-            go.transform.position = new Vector2(1.44f, 0);
+            //親を設定
+            go.transform.SetParent(mapParent);
+            go.transform.position = new Vector2(0.87f * 9, 0);
+            go.GetComponent<RectTransform>().sizeDelta = new Vector2(0.87f, 0.87f);
         }
     }
 }

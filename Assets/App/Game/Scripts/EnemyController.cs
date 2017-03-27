@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
-    private float speed = -0.16f;
+    private float speed = -0.87f;
     int x = 9;
     int y = 9;
     int count = 0;
