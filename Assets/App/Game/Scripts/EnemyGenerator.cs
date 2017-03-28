@@ -25,8 +25,9 @@ public class EnemyGenerator : MonoBehaviour
             GameObject go = Instantiate(enemyPrefab) as GameObject;
             //親を設定
             go.transform.SetParent(mapParent);
-            go.transform.position = new Vector2(0.87f * 9, 0);
-            go.GetComponent<RectTransform>().sizeDelta = new Vector2(0.87f, 0.87f);
+            go.GetComponent<RectTransform>().localScale = Vector3.one;
+            go.GetComponent<RectTransform>().localPosition = new Vector2(MapLoader.size * (MapLoader.devide - 1), 0);
+            go.GetComponent<RectTransform>().sizeDelta = new Vector2(MapLoader.size, MapLoader.size);
         }
     }
 }

@@ -102,7 +102,6 @@ GameObject:
   - component: {fileID: 6092438}
   - component: {fileID: 6092437}
   - component: {fileID: 6092436}
-  - component: {fileID: 6092439}
   m_Layer: 5
   m_Name: 'UpButton '
   m_TagString: Untagged
@@ -168,7 +167,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6092439}
+      - m_Target: {fileID: 1641591947}
         m_MethodName: UpButtonPush
         m_Mode: 1
         m_Arguments:
@@ -214,18 +213,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 6092434}
---- !u!114 &6092439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 6092434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4a1ac7201405244b6cb6eeaa7c44c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 1058096672}
 --- !u!1 &18565717
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +281,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18565717}
+--- !u!1 &167279197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 167279198}
+  - component: {fileID: 167279200}
+  - component: {fileID: 167279199}
+  m_Layer: 5
+  m_Name: MapCursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &167279198
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 167279197}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 243316009}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &167279199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 167279197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8985563, g: 0.9852941, b: 0.009, a: 0.659}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &167279200
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 167279197}
 --- !u!1 &243316008
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,13 +381,14 @@ RectTransform:
   - {fileID: 548998964}
   - {fileID: 1035567110}
   - {fileID: 1058096673}
+  - {fileID: 167279198}
   m_Father: {fileID: 1245018145}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: -500, y: 0}
+  m_AnchoredPosition: {x: 57.5, y: 0}
+  m_SizeDelta: {x: -465, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243316010
 MonoBehaviour:
@@ -480,7 +536,6 @@ GameObject:
   - component: {fileID: 363926559}
   - component: {fileID: 363926558}
   - component: {fileID: 363926557}
-  - component: {fileID: 363926560}
   m_Layer: 5
   m_Name: RightButton
   m_TagString: Untagged
@@ -546,7 +601,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 363926560}
+      - m_Target: {fileID: 1641591947}
         m_MethodName: RightButtonPush
         m_Mode: 1
         m_Arguments:
@@ -592,18 +647,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 363926555}
---- !u!114 &363926560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 363926555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4a1ac7201405244b6cb6eeaa7c44c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 1058096672}
 --- !u!1 &548998963
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,17 +782,17 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606495164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6134.957}
-  m_LocalScale: {x: 370, y: 370, z: 68.16619}
+  m_LocalPosition: {x: 0, y: 0, z: -6134.958}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1245018145}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5, y: -10}
-  m_SizeDelta: {x: 599, y: 600}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -243, y: -299}
+  m_SizeDelta: {x: 600, y: 600}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &687225514
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +804,6 @@ GameObject:
   - component: {fileID: 687225518}
   - component: {fileID: 687225517}
   - component: {fileID: 687225516}
-  - component: {fileID: 687225519}
   m_Layer: 5
   m_Name: LeftButton
   m_TagString: Untagged
@@ -827,7 +869,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 687225519}
+      - m_Target: {fileID: 1641591947}
         m_MethodName: LeftButtonPush
         m_Mode: 1
         m_Arguments:
@@ -873,18 +915,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 687225514}
---- !u!114 &687225519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 687225514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4a1ac7201405244b6cb6eeaa7c44c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 1058096672}
 --- !u!1 &897249746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,6 +1066,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 313782726}
+        m_MethodName: EnterButtonPush
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1641591947}
         m_MethodName: EnterButtonPush
         m_Mode: 1
         m_Arguments:
@@ -1234,7 +1275,7 @@ GameObject:
   - component: {fileID: 1058096675}
   - component: {fileID: 1058096674}
   m_Layer: 5
-  m_Name: Cursor
+  m_Name: UnitCursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1502,6 +1543,7 @@ RectTransform:
   - {fileID: 313782727}
   - {fileID: 1210068697}
   - {fileID: 1463754340}
+  - {fileID: 1641591946}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1521,6 +1563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7efe032da4d71144b4c5240948264e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapCursor: {fileID: 167279197}
+  mapParent: {fileID: 606495165}
+  canvas: {fileID: 1245018144}
 --- !u!1 &1260307146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,7 +1765,6 @@ GameObject:
   - component: {fileID: 1348806240}
   - component: {fileID: 1348806239}
   - component: {fileID: 1348806238}
-  - component: {fileID: 1348806241}
   m_Layer: 5
   m_Name: DownButton
   m_TagString: Untagged
@@ -1786,7 +1830,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1348806241}
+      - m_Target: {fileID: 1641591947}
         m_MethodName: DownButtonPush
         m_Mode: 1
         m_Arguments:
@@ -1832,18 +1876,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348806236}
---- !u!114 &1348806241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348806236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4a1ac7201405244b6cb6eeaa7c44c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 1058096672}
 --- !u!1 &1354357555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,7 +1962,7 @@ GameObject:
   - component: {fileID: 1379464266}
   - component: {fileID: 1379464265}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: PauseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1993,7 +2025,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1379464266}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1641591947}
+        m_MethodName: PauseButtonPush
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1379464266
@@ -2037,7 +2080,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1451048297}
-  - component: {fileID: 1451048298}
   m_Layer: 0
   m_Name: ArrowButtons
   m_TagString: Untagged
@@ -2062,18 +2104,6 @@ Transform:
   m_Father: {fileID: 1245018145}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1451048298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451048296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4a1ac7201405244b6cb6eeaa7c44c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 1058096672}
 --- !u!1 &1457304828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,7 +2205,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80683aef5b92abb44ace2fb6dba47fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allyPrefab: {fileID: 1248908780176308, guid: 4c02cb84c542e514e912153832b81756, type: 2}
+  allyPrefab1: {fileID: 1693899748886492, guid: 2929652d82868de4e9dc240f67d88d2c,
+    type: 2}
+  allyPrefab2: {fileID: 1533458240630322, guid: 8fa1e80b84158c44e9d19dca77429a76,
+    type: 2}
+  allyPrefab3: {fileID: 1030564727819466, guid: 927cb862e026c3946ac8e4aabc2a7387,
+    type: 2}
+  allyPrefab4: {fileID: 1594850076466926, guid: aba2f17d48c71ad4fbb84eeec24560c0,
+    type: 2}
   mapParent: {fileID: 606495165}
 --- !u!4 &1463754340
 Transform:
@@ -2264,6 +2301,56 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1569132453}
+--- !u!1 &1641591945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1641591946}
+  - component: {fileID: 1641591947}
+  m_Layer: 0
+  m_Name: ButtonController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1641591946
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1641591945}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 222.62222, y: -278.61255, z: -6129.6475}
+  m_LocalScale: {x: 68.10719, y: 68.10719, z: 68.10719}
+  m_Children: []
+  m_Father: {fileID: 1245018145}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641591947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1641591945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95de36f0a8321c4691210a2370bb785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitCursor: {fileID: 1058096672}
+  mapCursor: {fileID: 167279197}
+  unitPanelImage:
+  - {fileID: 243316010}
+  - {fileID: 18565719}
+  - {fileID: 1089987206}
+  - {fileID: 548998965}
+  - {fileID: 1035567111}
+  - {fileID: 1058096674}
+  - {fileID: 167279199}
 --- !u!1 &1657430826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,7 +2661,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1848961227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1641591947}
+        m_MethodName: SpeedDownButtonPush
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1848961227
@@ -2685,7 +2783,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1917078910}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1641591947}
+        m_MethodName: SpeedUpButtonPush
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1917078910
@@ -3063,7 +3172,6 @@ GameObject:
   - component: {fileID: 2070947511}
   - component: {fileID: 2070947510}
   - component: {fileID: 2070947509}
-  - component: {fileID: 2070947512}
   m_Layer: 5
   m_Name: 'UnitButton '
   m_TagString: Untagged
@@ -3129,8 +3237,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2070947512}
-        m_MethodName: ButtonPush
+      - m_Target: {fileID: 1641591947}
+        m_MethodName: UnitButtonPush
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3186,22 +3294,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2070947507}
---- !u!114 &2070947512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2070947507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 887b972102a7e52459615d2f1ee4f7f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  unitPanelImage:
-  - {fileID: 18565719}
-  - {fileID: 1089987206}
-  - {fileID: 243316010}
-  - {fileID: 548998965}
-  - {fileID: 1035567111}
-  - {fileID: 1058096674}

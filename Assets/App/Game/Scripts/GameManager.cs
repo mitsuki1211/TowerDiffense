@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour
 
     private int time;
     private GameObject enemyGenerator;
-    private GameObject allyGenerator;
-    private GameObject enter;
 
     public enum GameState
     {
@@ -30,9 +28,6 @@ public class GameManager : MonoBehaviour
         hp = 10;
 
         enemyGenerator = GameObject.Find("EnemyGenerator");
-        allyGenerator = GameObject.Find("AllyGenerator");
-        enter = GameObject.Find("EnterButtonController");
-
     }
 
 
@@ -61,65 +56,15 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameState.NONE:
-                /*if(Input.GetKeyDown(KeyCode.Return))
-                {
-                    SceneManager.LoadSceneAsync("TowerDiffense");
-                }*/
                 break;
           }
     }
 
     public static void Damage()
     {
-            hp--;        
-    }
-
-    public void EnterButtonPush()
-    {
-        switch (gameState)
+        if (hp > 0)
         {
-            case GameState.PLAY:               
-                break;
-
-            case GameState.PAUSE:
-                break;
-
-            case GameState.UNITPANEL:
-                gameState = GameState.UNIT;
-                break;
-
-            case GameState.UNIT:
-                allyGenerator.SendMessage("AllyGenerate");
-                Debug.Log(1);
-                break;
-
-
-            case GameState.NONE:
-                    SceneManager.LoadSceneAsync("TowerDiffense");
-                break;
-        }
+            hp--;
+        }        
     }
-
-    public void UnitButtonPush()
-    {
-        switch (gameState)
-        {
-            case GameState.PLAY:
-                gameState = GameState.UNITPANEL;
-                break;
-
-            case GameState.PAUSE:
-                break;
-
-            case GameState.UNITPANEL:
-                break;
-
-            case GameState.UNIT:
-                break;
-
-            case GameState.NONE:
-                break;
-        }
-    }
-
 }
