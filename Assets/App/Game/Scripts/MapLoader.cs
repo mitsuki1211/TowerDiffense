@@ -19,6 +19,7 @@ public class MapLoader : MonoBehaviour
     [SerializeField]
     private Canvas canvas;
 
+    int debug;
 
     // Use this for initialization
     void Start()
@@ -26,9 +27,9 @@ public class MapLoader : MonoBehaviour
         float height = canvas.GetComponent<RectTransform>().rect.height;
         size = height / devide;
 
-        for (i = 0; i >= devide; i++)
+        for (i = 0; i < devide; i++)
         {
-            for (j = 0; j >= devide; j++)
+            for (j = 0; j < devide; j++)
             {
                 mapArray[i, j] = 0;
             }

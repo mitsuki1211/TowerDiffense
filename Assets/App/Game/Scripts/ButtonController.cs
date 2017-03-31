@@ -158,6 +158,16 @@ public class ButtonController : MonoBehaviour
 
     public void PauseButtonPush()
     {
+        switch (GameManager.gameState)
+        {
+            case GameManager.GameState.PLAY:
+                GameManager.gameState = GameManager.GameState.PAUSE;
+                break;
+
+            case GameManager.GameState.PAUSE:
+                GameManager.gameState = GameManager.GameState.PLAY;
+                break;
+        }
     }
 
     public void EnterButtonPush()
@@ -178,7 +188,7 @@ public class ButtonController : MonoBehaviour
                 break;
 
             case GameManager.GameState.NONE:
-                SceneManager.LoadSceneAsync("TowerDiffense");
+                SceneManager.LoadScene("TowerDiffense");
                 break;
         }
 

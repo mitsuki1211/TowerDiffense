@@ -28,6 +28,9 @@ public class EnemyGenerator : MonoBehaviour
             go.GetComponent<RectTransform>().localScale = Vector3.one;
             go.GetComponent<RectTransform>().localPosition = new Vector2(MapLoader.size * (MapLoader.devide - 1), 0);
             go.GetComponent<RectTransform>().sizeDelta = new Vector2(MapLoader.size, MapLoader.size);
+            BoxCollider2D bc = go.GetComponent<BoxCollider2D>();
+            bc.size = new Vector2(MapLoader.size, MapLoader.size);
+            bc.offset = new Vector2(MapLoader.size / 2, MapLoader.size / 2);
         }
     }
 }
